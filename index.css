@@ -1,0 +1,75 @@
+/* --------------------------- */
+/* Reset */
+/* --------------------------- */
+
+/* good starting point for resets to copy/paste into projects */
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+/* max width percent ensures that images shrink as viewport/space gets more narrow */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make forms easier to work with */
+/* form elements don't automatically inherit the font properties so it has to be specified */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who have turned them off  */
+/* this code will disable animation settings for people who prefer not to have them - makes it more accessible  */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------- */
+/* Utility Classes */
+/* --------------------------- */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
