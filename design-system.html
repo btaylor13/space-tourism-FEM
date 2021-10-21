@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Design System</title>
+  </head>
+  <body class="bg-dark text-white">
+    <div class="container">
+      <h1>Design System</h1>
+      <section class="bg-dark" id="colors">
+        <h2 class="numbered-title"><span>01 </span>Colors</h2>
+
+        <div class="flex">
+          <div class="bg-dark text-white" style="flex-grow: 1">
+            <div style="padding: 3rem 1rem 1rem; border: 1px solid white">
+              #0B0D17
+            </div>
+            <p><span class="text-accent">RGB</span> 11, 13, 23</p>
+            <p><span class="text-accent">HSL</span> 230 35% 7%</p>
+          </div>
+
+          <div class="bg-dark" style="flex-grow: 1">
+            <div
+              class="bg-accent text-dark"
+              style="padding: 3rem 1rem 1rem; border: 1px solid white"
+            >
+              #0B0D17
+            </div>
+            <p><span class="text-accent">RGB</span> 208, 214, 249</p>
+            <p><span class="text-accent">HSL</span> 231, 77%, 90%</p>
+          </div>
+
+          <div class="bg-dark" style="flex-grow: 1">
+            <div
+              class="text-dark bg-white"
+              style="padding: 3rem 1rem 1rem; border: 1px solid white"
+            >
+              #0B0D17
+            </div>
+            <p><span class="text-accent">RGB</span> 255, 255, 255</p>
+            <p><span class="text-accent">HSL</span> 0, 0% 100%</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="typography" style="margin: 4rem 0">
+        <h2 class="numbered-title"><span>02 </span>Typography</h2>
+        <div class="typography-container flex">
+          <div class="headings-container flow" style="flex-basis: 100%">
+            <!-- Heading 1 -->
+            <div class="heading-1-container">
+              <p class="fs-400 text-accent">
+                Heading 1 - Bellefair Regular - 150px
+              </p>
+              <h1 class="heading-1 uppercase fs-900 ff-serif">Earth</h1>
+            </div>
+
+            <!-- Heading 2 -->
+            <div class="heading-2-container">
+              <p class="fs-400 text-accent">
+                Heading 2 - Bellefair Regular - 100px
+              </p>
+              <h2 class="heading-2 uppercase fs-800 ff-serif">Venus</h2>
+            </div>
+
+            <!-- Heading 3 -->
+            <div class="heading-3-container">
+              <p class="fs-400 text-accent">
+                Heading 3 - Bellefair Regular - 56px
+              </p>
+              <h3 class="heading-3 uppercase fs-700 ff-serif">
+                Jupiter & Saturn
+              </h3>
+            </div>
+
+            <!-- Heading 4 -->
+            <div class="heading-4-container">
+              <p class="fs-400 text-accent">
+                Heading 4 - Bellefair Regular - 32px
+              </p>
+              <h4 class="heading-4 uppercase fs-600 ff-serif">
+                Uranus, Neptune, & Pluto
+              </h4>
+            </div>
+
+            <!-- Heading 5 -->
+            <div class="heading-5-container">
+              <p class="fs-400 text-accent">
+                Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character
+                Space
+              </p>
+              <h5
+                class="
+                  heading-5
+                  uppercase
+                  fs-500
+                  ff-sans-cond
+                  letter-spacing-1
+                  text-accent
+                "
+              >
+                So, You want to travel to space
+              </h5>
+            </div>
+          </div>
+
+          <div class="other-typo-container flow" style="flex-basis: 100%">
+            <!-- Subheading 1 -->
+            <div class="subheading-1-container">
+              <p class="fs-400 text-accent">
+                Subheading 1 - Bellefair Regular - 28px
+              </p>
+              <p class="fs-500 ff-serif uppercase">384,400 km</p>
+            </div>
+
+            <!-- Subheading 2 -->
+            <div class="subheading-2-container">
+              <p class="fs-400 text-accent">
+                Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character
+                Space
+              </p>
+              <p class="fs-200 ff-sans-cond uppercase letter-spacing-3">
+                Avg. Distance
+              </p>
+            </div>
+
+            <!-- Nav Text -->
+            <div class="nav-text-container">
+              <p class="fs-400 text-accent">
+                Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space
+              </p>
+              <p class="fs-300 ff-sans-cond uppercase letter-spacing-2">
+                Europa
+              </p>
+            </div>
+
+            <!-- Body Text -->
+            <div class="body-text-container">
+              <p>Body Text</p>
+              <p class="fs-400">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
+                neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
+                ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.
+                Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh
+                nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel,
+                nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor
+                libero sodales leo, eget blandit nunc tortor eu nibh. Nullam
+                mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit
+                amet, consectetuer adipiscing elit. Phasellus hendrerit.
+                Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel,
+                dapibus id, mattis vel, nisi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flow" id="interactive-elements">
+        <h2 class="numbered-title"><span>03</span> Interactive Elements</h2>
+
+        <!-- Navigation -->
+        <div>
+          <nav>
+            <ul class="primary-navigation flex underline-indicators">
+              <li class="active">
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>00</span>Active</a
+                >
+              </li>
+              <li>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>01</span>Hovered</a
+                >
+              </li>
+              <li>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>02</span>Idle</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex">
+          <div style="margin-top: 5rem">
+            <!-- explore button -->
+            <a
+              href="#"
+              class="large-button bg-white text-dark uppercase ff-serif fs-600"
+              >Explore</a
+            >
+          </div>
+
+          <div style="margin-bottom: 50vh; --flow-space: 4rem" class="flow">
+            <!-- Tabs -->
+            <div class="tab-list underline-indicators flex">
+              <button
+                aria-selected="true"
+                class="
+                  uppercase
+                  text-accent
+                  letter-spacing-2
+                  bg-dark
+                  ff-sans-cond
+                "
+              >
+                Moon
+              </button>
+              <button
+                aria-selected="false"
+                class="
+                  uppercase
+                  text-accent
+                  letter-spacing-2
+                  bg-dark
+                  ff-sans-cond
+                "
+              >
+                Mars
+              </button>
+              <button
+                aria-selected="false"
+                class="
+                  uppercase
+                  text-accent
+                  letter-spacing-2
+                  bg-dark
+                  ff-sans-cond
+                "
+              >
+                Europa
+              </button>
+            </div>
+            <!-- Dots -->
+            <div class="dot-indicators flex">
+              <button aria-selected="true">
+                <span class="sr-only">Slide Title</span>
+              </button>
+              <button aria-selected="false">
+                <span class="sr-only">Slide Title</span>
+              </button>
+              <button aria-selected="false">
+                <span class="sr-only">Slide Title</span>
+              </button>
+            </div>
+
+            <!-- Numbers
+                
+             -->
+            <div class="numbered-indicators ff-serif flex">
+              <button aria-selected="true">1</button>
+              <button aria-selected="false">2</button>
+              <button aria-selected="false">3</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="index.pack.js"></script>
+  </body>
+</html>
