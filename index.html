@@ -23,10 +23,12 @@
     <link rel="stylesheet" href="index.css" />
 
     <title>Frontend Mentor | Space tourism website</title>
+    <script src="index.js" defer></script>
   </head>
   <body class="home">
+    <a class="skip-to-content" href="#main">Skip to content</a>
     <header class="primary-header flex">
-      <div>
+      <div class="logo-container">
         <img
           src="./assets/shared/logo.svg"
           alt="space tourism logo"
@@ -36,43 +38,46 @@
       <button class="mobile-nav-toggle" aria-controls="primary-navigation">
         <span class="sr-only" aria-expanded="false">Menu</span>
       </button>
-      <nav>
+      <nav class="nav-container">
         <ul
           id="primary-navigation"
+          data-visible="false"
           class="primary-navigation flex underline-indicators"
         >
           <li class="active">
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="index.html"
-              ><span>00</span>Home</a
+              ><span aria-hidden="true">00</span>Home</a
             >
           </li>
           <li>
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="destination.html"
-              ><span>01</span>Destination</a
+              ><span aria-hidden="true">01</span>Destination</a
             >
           </li>
           <li>
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="crew.html"
-              ><span>02</span>Crew</a
+              ><span aria-hidden="true">02</span>Crew</a
             >
           </li>
           <li>
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="technology.html"
-              ><span>03</span>Technology</a
+              ><span aria-hidden="true">03</span>Technology</a
             >
           </li>
         </ul>
       </nav>
+      <!-- my after:: is here -->
     </header>
-    <div class="grid-container grid-container--home">
+
+    <main id="main" class="grid-container grid-container--home">
       <div>
         <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
           So, you want to travel to
@@ -92,7 +97,7 @@
           >Explore</a
         >
       </div>
-    </div>
+    </main>
     <script src="index.pack.js"></script>
   </body>
 </html>
