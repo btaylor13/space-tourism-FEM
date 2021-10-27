@@ -156,6 +156,10 @@ select {
   max-width: 80rem;
 }
 
+.flow--space-small {
+  --flow-space: 0.5rem;
+}
+
 /* common utility - means screen reader only */
 /* use to visually hide content for sighted user but keep the content in the page and give extra content for users using assistive technologies */
 .sr-only {
@@ -438,9 +442,10 @@ select {
 /* Selecting every direct child of underline indicators */
 .underline-indicators > * {
   cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
+  padding: var(--underline-gap, 0.5rem) 0;
   border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+  background-color: transparent;
 }
 
 .underline-indicators > *:focus {
@@ -535,6 +540,42 @@ body {
   }
 }
 
+/* destination */
+.destination {
+  background-image: url(./assets/destination/background-destination-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+  .destination {
+    background-position: center center;
+    background-image: url(./assets/destination/background-destination-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+  .destination {
+    background-image: url(./assets/destination/background-destination-desktop.jpg);
+  }
+}
+
+/* crew */
+.crew {
+  background-image: url(./assets/crew/background-crew-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+  .crew {
+    background-position: center center;
+    background-image: url(./assets/crew/background-crew-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+  .crew {
+    background-image: url(./assets/crew/background-crew-desktop.jpg);
+  }
+}
+
 /* --------------------------- */
 /* Layout -------------------- */
 /* --------------------------- */
@@ -607,12 +648,16 @@ body {
   border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
 }
 
-.grid-container--crew > .dot-list {
+.grid-container--crew > .dot-indicators {
   grid-area: tabs;
 }
 
 .grid-container--crew > .crew-details {
   grid-area: content;
+}
+
+.crew-details h2 {
+  color: hsl(var(--clr-white) / 0.5);
 }
 
 @media (min-width: 35rem) {
@@ -623,6 +668,15 @@ body {
   .destination-meta {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .grid-container--crew {
+    padding-bottom: 0;
+    grid-template-areas:
+      "title"
+      "content"
+      "tabs"
+      "image";
   }
 }
 
@@ -658,12 +712,27 @@ body {
       ". image content .";
   }
 
-  .grid-container--destination > img {
-    max-width: 90%;
+  .grid-container--destination > img,
+  .grid-container--crew > img {
+    max-width: 92%;
+  }
+  .grid-container--crew > img {
+    align-self: end;
   }
 
   .destination-meta {
     --gap: min(6vw, 6rem);
     justify-content: start;
+  }
+
+  .grid-container--crew {
+    grid-template-areas:
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
+  }
+
+  .grid-container--crew > .dot-indicators {
+    justify-self: start;
   }
 }
