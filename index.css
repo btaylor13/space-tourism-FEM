@@ -127,6 +127,10 @@ select {
   }
 }
 
+[hidden] {
+  display: none !important;
+}
+
 /* --------------------------- */
 /* Utility Classes */
 /* --------------------------- */
@@ -607,7 +611,7 @@ body {
     "content";
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
 }
@@ -642,7 +646,7 @@ body {
     "content";
 }
 
-.grid-container--crew > img {
+.grid-container--crew > picture {
   grid-area: image;
   max-width: 60%;
   border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
@@ -712,11 +716,11 @@ body {
       ". image content .";
   }
 
-  .grid-container--destination > img,
-  .grid-container--crew > img {
+  .grid-container--destination > picture,
+  .grid-container--crew > picture {
     max-width: 92%;
   }
-  .grid-container--crew > img {
+  .grid-container--crew > picture {
     align-self: end;
   }
 
