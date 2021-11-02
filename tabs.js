@@ -16,21 +16,17 @@ function changeTabFocus(e) {
   // change the tabindex of the current tab to -1
   if (e.keyCode === keydownLeft || e.keyCode === keydownRight) {
     tabs[tabFocus].setAttribute("tabindex", -1);
-  }
 
-  // if the right key is pushed, move to the next tab on the right
-  if (e.keyCode === keydownRight) {
-    tabFocus++;
-    if (tabFocus >= tabs.length) {
-      tabFocus = 0;
-    }
-  }
-
-  // if the left key is pushed, move to the next tab on the left
-  if (e.keyCode === keydownLeft) {
-    tabFocus--;
-    if (tabFocus < 0) {
-      tabFocus = tabs.length - 1;
+    if (e.keyCode === keydownRight) {
+      tabFocus++;
+      if (tabFocus >= tabs.length) {
+        tabFocus = 0;
+      }
+    } else if (e.keyCode === keydownLeft) {
+      tabFocus--;
+      if (tabFocus < 0) {
+        tabFocus = tabs.length - 1;
+      }
     }
   }
 
@@ -46,20 +42,41 @@ function changeTabPanel(e) {
   const tabContainer = targetTab.parentNode;
   const mainContainer = tabContainer.parentNode;
 
+  tabContainer
+    .querySelector("[aria-selected='true']")
+    .setAttribute("aria-selected", false);
+
+  targetTab.setAttribute("aria-selected", true);
+
   // hide all article elements with tabpanel role
-  mainContainer
-    .querySelectorAll("[role='tabpanel']")
-    .forEach((panel) => panel.setAttribute("hidden", true));
+  hideContent(mainContainer, "[role='tabpanel']");
+  // mainContainer
+  //   .querySelectorAll("[role='tabpanel']")
+  //   .forEach((panel) => panel.setAttribute("hidden", true));
 
-  // display picture when tab is clicked - removes hidden attribute from picture
-  mainContainer.querySelector([`#${targetPanel}`]).removeAttribute(["hidden"]);
+  // display appropriate article when tab is clicked - removes hidden attribute from article
+  showContent(mainContainer, [`#${targetPanel}`]);
+  // mainContainer.querySelector([`#${targetPanel}`]).removeAttribute(["hidden"]);
 
-  mainContainer
-    .querySelectorAll("picture")
-    .forEach((picture) => picture.setAttribute("hidden", true));
+  // hide all picture elements
+  hideContent(mainContainer, "picture");
+  // mainContainer
+  //   .querySelectorAll("picture")
+  //   .forEach((picture) => picture.setAttribute("hidden", true));
 
   // display appropriate picture when tab is clicked
-  mainContainer
-    .querySelector([`#${targetPicture}`])
-    .removeAttribute(["hidden"]);
+  showContent(mainContainer, [`#${targetPicture}`]);
+  // mainContainer
+  //   .querySelector([`#${targetPicture}`])
+  //   .removeAttribute(["hidden"]);
+}
+
+function hideContent(parent, content) {
+  parent
+    .querySelectorAll(content)
+    .forEach((item) => item.setAttribute("hidden", true));
+}
+
+function showContent(parent, content) {
+  parent.querySelector(content).removeAttribute(["hidden"]);
 }
