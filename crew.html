@@ -84,23 +84,56 @@
         <span aria-hidden="true">02</span> Meet your crew
       </h1>
 
-      <div class="dot-indicators flex">
-        <button aria-selected="true">
+      <div
+        class="dot-indicators flex"
+        role="tablist"
+        aria-label="crew member list"
+      >
+        <button
+          aria-selected="true"
+          aria-controls="commander-article"
+          data-image="commander-image"
+          role="tab"
+          tabindex="0"
+        >
           <span class="sr-only">The commander</span>
         </button>
-        <button aria-selected="false">
+        <button
+          aria-selected="false"
+          aria-controls="mission-specialist-article"
+          data-image="mission-specialist-image"
+          role="tab"
+          tabindex="-1"
+        >
           <span class="sr-only">The mission specialist</span>
         </button>
-        <button aria-selected="false">
+        <button
+          aria-selected="false"
+          aria-controls="pilot-article"
+          data-image="pilot-image"
+          role="tab"
+          tabindex="-1"
+        >
           <span class="sr-only">The pilot</span>
         </button>
-        <button aria-selected="false">
-          <span class="sr-only">The crew engineer</span>
+        <button
+          aria-selected="false"
+          aria-controls="flight-engineer-article"
+          data-image="flight-engineer-image"
+          role="tab"
+          tabindex="-1"
+        >
+          <span class="sr-only">The flight engineer</span>
         </button>
       </div>
       <!-- Crew Member Articles -->
       <!-- Douglas Hurley Commander Crew Member -->
-      <article class="crew-details flow">
+      <article
+        class="crew-details flow"
+        id="commander-article"
+        role="tabpanel"
+        tabindex="0"
+      >
         <header class="flow flow--space-small">
           <h2 class="fs-600 ff-serif uppercase">Commander</h2>
           <p class="fs-700 uppercase ff-serif">Douglas Hurley</p>
@@ -112,7 +145,13 @@
         </p>
       </article>
       <!-- Mark Shuttleworth Mission Specialist Crew Member -->
-      <article class="crew-details flow">
+      <article
+        hidden
+        class="crew-details flow"
+        id="mission-specialist-article"
+        role="tabpanel"
+        tabindex="-1"
+      >
         <header class="flow flow--space-small">
           <h2 class="fs-600 ff-serif uppercase">Mission Specialist</h2>
           <p class="fs-700 uppercase ff-serif">Mark Shuttleworth</p>
@@ -124,7 +163,13 @@
         </p>
       </article>
       <!-- Victor Glover Pilot Crew Member -->
-      <article class="crew-details flow">
+      <article
+        hidden
+        class="crew-details flow"
+        id="pilot-article"
+        role="tabpanel"
+        tabindex="-1"
+      >
         <header class="flow flow--space-small">
           <h2 class="fs-600 ff-serif uppercase">Pilot</h2>
           <p class="fs-700 uppercase ff-serif">Victor Glover</p>
@@ -137,7 +182,13 @@
         </p>
       </article>
       <!-- Anousheh Ansari Flight Engineer Crew Member -->
-      <article class="crew-details flow">
+      <article
+        hidden
+        class="crew-details flow"
+        id="flight-engineer-article"
+        role="tabpanel"
+        tabindex="-1"
+      >
         <header class="flow flow--space-small">
           <h2 class="fs-600 ff-serif uppercase">Flight Engineer</h2>
           <p class="fs-700 uppercase ff-serif">Anousheh Ansari</p>
