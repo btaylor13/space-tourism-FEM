@@ -517,6 +517,14 @@ select {
   border: 1px solid hsl(var(--clr-white));
 }
 
+@media (min-width: 45rem) {
+  .numbered-indicators {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: end;
+  }
+}
+
 /* --------------------------- */
 /* Page Specific Backgrounds */
 /* --------------------------- */
@@ -653,7 +661,7 @@ body {
   font-size: 1.75rem;
 }
 
-/* the crew layout */
+/* crew layout */
 
 .grid-container--crew {
   --flow-space: 2rem;
@@ -682,6 +690,43 @@ body {
   color: hsl(var(--clr-white) / 0.5);
 }
 
+/* technology layout */
+
+.grid-container--technology {
+  --flow-space: 1rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.grid-container--technology > picture {
+  grid-area: image;
+  /* max-width: 100%; */
+  border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
+  min-width: calc(100% + 2rem);
+  /* width: 100%; */
+  margin-left: -2.2rem;
+  margin-right: -2.5rem;
+}
+
+.grid-container--technology > .numbered-indicators {
+  grid-area: tabs;
+}
+
+.grid-container--technology > .tech-details {
+  grid-area: content;
+  max-width: 90%;
+}
+
+.grid-container--technology > picture {
+  grid-area: image;
+}
+
+/* end technology layout */
+/* tablet media queries */
+
 @media (min-width: 35rem) {
   .numbered-title {
     justify-self: start;
@@ -701,7 +746,7 @@ body {
       "image";
   }
 }
-
+/* desktop layout */
 @media (min-width: 45rem) {
   .grid-container {
     text-align: left;
@@ -758,6 +803,47 @@ body {
       ". title title ."
       ". content image ."
       ". tabs image .";
+  }
+}
+
+@media (min-width: 46rem) {
+  .grid-container--technology > picture {
+    min-width: calc(100% + 2rem);
+    /* width: 100%; */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .grid-container--technology {
+    grid-template-columns:
+      minmax(1rem, 1fr) minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 23rem)
+      minmax(1rem, 1fr);
+    justify-items: start;
+    align-items: start;
+    grid-template-areas:
+      ". title title . ."
+      ". tabs content image .";
+  }
+
+  .grid-container--technology > picture {
+    max-width: 85%;
+    margin: 0;
+    grid-column: span 2;
+  }
+
+  .grid-container--technology > .tech-details {
+    grid-area: content;
+    align-self: center;
+    padding-left: 2rem;
+  }
+
+  .grid-container--technology > .numbered-indicators {
+    align-self: center;
+    justify-self: start;
+  }
+  .grid-container--technology > .numbered-indicators > * {
+    align-self: start;
+    justify-self: start;
   }
 }
 
