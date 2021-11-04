@@ -498,6 +498,8 @@ select {
   border: 0;
   place-items: center;
   text-align: center;
+  cursor: pointer;
+  text-align: center;
 }
 
 .numbered-indicators > [aria-selected="true"] {
@@ -641,7 +643,7 @@ body {
   grid-area: image;
   max-width: 60%;
   align-self: start;
-  animation: rotate 50s infinite linear;
+  animation: rotate 80s infinite linear;
 }
 
 .grid-container--destination > .tab-list {
@@ -851,10 +853,7 @@ body {
     width: 4rem;
     margin-bottom: 0.8rem;
     justify-content: center;
-  }
-
-  div.test {
-    text-align: center;
+    display: flex;
   }
 }
 
