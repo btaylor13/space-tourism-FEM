@@ -497,6 +497,7 @@ select {
   aspect-ratio: 1;
   border: 0;
   place-items: center;
+  text-align: center;
 }
 
 .numbered-indicators > [aria-selected="true"] {
@@ -640,6 +641,7 @@ body {
   grid-area: image;
   max-width: 60%;
   align-self: start;
+  animation: rotate 50s infinite linear;
 }
 
 .grid-container--destination > .tab-list {
@@ -806,7 +808,7 @@ body {
   }
 }
 
-@media (min-width: 46rem) {
+@media (min-width: 45rem) {
   .grid-container--technology > picture {
     min-width: calc(100% + 2rem);
     /* width: 100%; */
@@ -816,7 +818,7 @@ body {
 
   .grid-container--technology {
     grid-template-columns:
-      minmax(1rem, 1fr) minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 23rem)
+      minmax(1rem, 1fr) minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 14rem)
       minmax(1rem, 1fr);
     justify-items: start;
     align-items: start;
@@ -826,7 +828,7 @@ body {
   }
 
   .grid-container--technology > picture {
-    max-width: 85%;
+    max-width: 95%;
     margin: 0;
     grid-column: span 2;
   }
@@ -835,7 +837,7 @@ body {
     grid-area: content;
     align-self: center;
     padding-left: 2.2rem;
-    max-width: 85%;
+    max-width: 90%;
   }
 
   .grid-container--technology > .numbered-indicators {
@@ -848,11 +850,23 @@ body {
     height: 4rem;
     width: 4rem;
     margin-bottom: 0.8rem;
-    text-align: center;
     justify-content: center;
+  }
+
+  div.test {
+    text-align: center;
   }
 }
 
 [role="tab"]:focus {
   color: white;
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
