@@ -84,7 +84,7 @@
       </h1>
 
       <div
-        class="numbered-indicators flex"
+        class="numbered-indicators flex ff-serif fs-500"
         role="tablist"
         aria-label="technology list"
       >
@@ -95,8 +95,10 @@
           role="tab"
           tabindex="0"
         >
-          <span class="sr-only">Launch Vehicle</span>
-          1
+          <div>
+            <span class="sr-only">Launch Vehicle</span>
+            1
+          </div>
         </button>
 
         <button
@@ -106,7 +108,7 @@
           role="tab"
           tabindex="-1"
         >
-          <span class="sr-only">Spaceport</span>2
+          <div><span class="sr-only">Spaceport</span>2</div>
         </button>
 
         <button
@@ -145,11 +147,57 @@
         </p>
       </article>
       <!-- Spaceport Article -->
+      <article
+        hidden
+        class="tech-details flow"
+        id="spaceport-article"
+        role="tabpanel"
+        tabindex="-1"
+      >
+        <header class="flow">
+          <h2
+            class="fs-300 letter-spacing-2 ff-sans-cond text-accent uppercase"
+          >
+            The Terminology...
+          </h2>
+          <p class="fs-700 uppercase ff-serif">Spaceport</p>
+        </header>
+        <p class="text-accent">
+          A spaceport or cosmodrome is a site for launching (or receiving)
+          spacecraft, by analogy to the seaport for ships or airport for
+          aircraft. Based in the famous Cape Canaveral, our spaceport is ideally
+          situated to take advantage of the Earth's rotation for launch.
+        </p>
+      </article>
+
       <!-- Space Capsule Article -->
+      <article
+        hidden
+        class="tech-details flow"
+        id="capsule-article"
+        role="tabpanel"
+        tabindex="-1"
+      >
+        <header class="flow">
+          <h2
+            class="fs-300 letter-spacing-2 ff-sans-cond text-accent uppercase"
+          >
+            The Terminology...
+          </h2>
+          <p class="fs-700 uppercase ff-serif">Space Capsule</p>
+        </header>
+        <p class="text-accent">
+          A space capsule is an often-crewed spacecraft that uses a blunt-body
+          reentry capsule to reenter the Earth's atmosphere without wings. Our
+          capsule is where you'll spend your time during the flight. It includes
+          a space gym, cinema, and plenty of other activities to keep you
+          entertained.
+        </p>
+      </article>
       <!-- End of Technology Articles -->
       <!-- Technology Pictures -->
       <!-- Launch Vehicle Picture -->
-      <picture id="vehicle-image">
+      <picture hidden id="vehicle-image">
         <source
           media="(min-width: 45rem)"
           srcset="assets/technology/image-launch-vehicle-portrait.jpg"
@@ -160,7 +208,27 @@
         />
       </picture>
       <!-- Spaceport Picture -->
+      <picture hidden id="spaceport-image">
+        <source
+          media="(min-width: 45rem)"
+          srcset="assets/technology/image-spaceport-portrait.jpg"
+        />
+        <img
+          src="assets/technology/image-spaceport-landscape.jpg"
+          alt="Space Vehicle"
+        />
+      </picture>
       <!-- Space Capsule Picture -->
+      <picture id="capsule-image">
+        <source
+          media="(min-width: 45rem)"
+          srcset="assets/technology/image-space-capsule-portrait.jpg"
+        />
+        <img
+          src="assets/technology/image-space-capsule-landscape.jpg"
+          alt="Space Vehicle"
+        />
+      </picture>
       <!-- End of Technology Pictures -->
     </main>
   </body>

@@ -521,7 +521,7 @@ select {
   .numbered-indicators {
     flex-direction: column;
     align-items: stretch;
-    justify-content: end;
+    justify-content: center;
   }
 }
 
@@ -834,16 +834,22 @@ body {
   .grid-container--technology > .tech-details {
     grid-area: content;
     align-self: center;
-    padding-left: 2rem;
+    padding-left: 2.2rem;
+    max-width: 85%;
   }
 
   .grid-container--technology > .numbered-indicators {
     align-self: center;
     justify-self: start;
+    display: flex;
   }
+
   .grid-container--technology > .numbered-indicators > * {
-    align-self: start;
-    justify-self: start;
+    height: 4rem;
+    width: 4rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    justify-content: center;
   }
 }
 
